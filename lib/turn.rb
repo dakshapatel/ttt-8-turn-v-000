@@ -41,4 +41,5 @@ else
     until counter == valid_move?(board,index)
     puts "Please enter 1-9:"
     counter += 1
+  end
 end
