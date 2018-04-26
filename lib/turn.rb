@@ -34,10 +34,10 @@ def turn(board)
   puts "Please enter 1-9:"
   user_input=gets.chomp
   any_variable_name = input_to_index(user_input)
-  if index
-
-  else
+  if index != valid_move?(board,index)
+    return true
+else
     count= 0
-    until counter ==
+    until counter == valid_move?(board,index)
     puts "Please enter 1-9:"
 end
