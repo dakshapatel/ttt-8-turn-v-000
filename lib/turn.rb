@@ -35,7 +35,7 @@ def turn(board)
   user_input=gets.chomp
   any_variable_name = input_to_index(user_input)
   if index != valid_move?(board,index)
-    return continue
+    return "continue"
 else
     counter= 0
     until counter == valid_move?(board,index)
