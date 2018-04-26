@@ -7,6 +7,10 @@ def display_board(board)
    puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
+def input_to_index(board,index)
+
+end
+
 def position_taken?(board,index)
   if board[index] == " " || board[index] == "" || board[index] == nil
     return false
@@ -28,5 +32,6 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
-
+  user_input = gets.chomp
+  board = user_input.to_i - 1
 end
