@@ -38,7 +38,7 @@ def turn(board)
     return true
 else
     counter= 0
-    until counter == valid_move?(board,index)
+    until index.between(0,8) == valid_move?(board,index)
     puts "Please enter 1-9:"
     counter += 1
   end
