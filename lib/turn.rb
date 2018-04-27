@@ -33,13 +33,13 @@ end
 def turn(board)
   puts "Please enter 1-9:"
     user_input=gets.chomp
-    any_variable_name = input_to_index(user_input)
-  if any_variable_name == !valid_move?(board,index)
+    index = input_to_index(user_input)
+  if index == !valid_move?(board,index)
     return move(board,index,token) && display_board(board)
   else
-    any_variable_name = 0
-    until any_variable_name == !valid_move?(board,index)
+    index = 0
+    until index == !valid_move?(board,index)
     puts "Please enter 1-9:"
-    any_variable_name  += 1
+    index  += 1
   end
 end
