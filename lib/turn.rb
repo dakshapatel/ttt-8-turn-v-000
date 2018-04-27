@@ -1,4 +1,4 @@
-
+require 'pry'
 def display_board(board)
    puts " #{board[0]} | #{board[1]} | #{board[2]} "
    puts "-----------"
@@ -34,12 +34,15 @@ def turn(board)
   puts "Please enter 1-9:"
     user_input=gets.chomp
     index = input_to_index(user_input)
+    binding.pry
   if index == !valid_move?(board,index)
+
     return move(board,index,token) && display_board(board)
   else
     index = 0
     until index == !valid_move?(board,index)
-    puts "Please enter 1-9:"
-    index  += 1
+      puts "Please enter 1-9:"
+      index  += 1
+    end
   end
 end
