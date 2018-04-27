@@ -37,9 +37,9 @@ def turn(board)
   if any_variable_name == !valid_move?(board,index)
     return move(board,index,token) && display_board(board)
   else
-    counter= 0
+    any_variable_name = 0
     until any_variable_name == !valid_move?(board,index)
     puts "Please enter 1-9:"
-    counter += 1
+    any_variable_name  += 1
   end
 end
