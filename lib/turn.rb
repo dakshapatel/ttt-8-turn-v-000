@@ -35,14 +35,17 @@ def turn(board)
     user_input=gets.chomp
     index = input_to_index(user_input)
     binding.pry
-  if index == !valid_move?(board,index)
+  if valid_move?(board,index)
 
     return move(board,index,token) && display_board(board)
   else
     index = 0
-    until index == !valid_move?(board,index)
+    until valid_move?(board,index)
       puts "Please enter 1-9:"
       index  += 1
     end
   end
 end
+
+
+if
